@@ -4,7 +4,8 @@ export default {
       primary_dark: "#BD5800",
       gray: "#7B7B7B",
       white: "#FFFFFF",
-      linear_gradient_background: ["#F46F0A","#D86305","#BD5800"],
+      black: "#000000",
+      linear_gradient_background: ["#BD5800","#D86305","#F46F0A"],
     },
     fonts: {
       regular: "Poppins_400Regular",

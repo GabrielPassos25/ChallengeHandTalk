@@ -5,8 +5,8 @@ function SvgComponent() {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
-      width={336.59}
-      height={86}
+      width={172}
+      height={44}
       viewBox="0 0 336.59 86"
     >
       <G fill="#FFF">
