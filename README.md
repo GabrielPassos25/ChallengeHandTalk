@@ -26,7 +26,7 @@
       </ul>
     </li>
     <li>
-      <a href="#Main features to be added">Main features to be added</a>
+      <a href="#Important Points">Important Points</a>
     </li>
     <li><a href="#Prints">Prints of the developed application</a></li>
   </ol>
