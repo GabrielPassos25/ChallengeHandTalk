@@ -123,3 +123,8 @@ Technologies and frameworks that were used throughout the implementation of the 
  </a>
 
 Abaixo, ilustro algumas das telas implementadas, de acordo com o protótipo do figma.
+- Iphone:
+https://user-images.githubusercontent.com/47640031/131271940-3de48cb7-e559-4127-8eb8-cb4357ab6d7c.MP4
+
+- Android:
+https://user-images.githubusercontent.com/47640031/131271902-2b0985d5-619a-4c4f-ac7c-9af76540e37d.MP4
