@@ -112,8 +112,9 @@ Technologies and frameworks that were used throughout the implementation of the 
   - [x] Invalid color alert;
   - [x] Avoid input overlap with the keyboard;
   - [ ] Invalid color bug in android -> Apparently, when trying to put an invalid color in android, the error condition is not being validated and the color goes invalid in the database. However, when trying to change the color to a valid color, the change occurs normally. **(NOTE: THIS DOES NOT HAPPEN ON IOS. VALIDATION OCCURS AND THE COLOR IS NOT CHANGED)**
+  - [ ] Investigate -> On android, it is only possible to change the color of one picture at a time per session. Apparently we have to relog to avoid the error message and be able to change the color of two pictures.
 - Emulator Issue
-  - [ ] Investigate native emulator error
+  - [ ] Investigate -> Native emulator error
 
 ## Prints
 <a href="https://www.figma.com/file/7muiBa3MVMuood6zDHWtSF/Challenge-Hand-Talk?node-id=0%3A1">Mockup and style guide</a> created to serve as a guide for project implementation using Figma. 
