@@ -26,7 +26,7 @@
       </ul>
     </li>
     <li>
-      <a href="#Important Points">Important Points</a>
+      <a href="#important-points">Important Points</a>
     </li>
     <li><a href="#Prints">Prints of the developed application</a></li>
   </ol>
