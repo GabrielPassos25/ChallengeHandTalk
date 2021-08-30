@@ -14,16 +14,13 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#About the project">About the project</a>
+      <a href="#about-the-project">About the project</a>
       <ul>
-        <li><a href="#Built with">Built with</a></li>
+        <li><a href="#built-with">Built with</a></li>
       </ul>
     </li>
     <li>
-      <a href="#Firststeps">First steps</a>
-      <ul>
-        <li><a href="#Installation">Installation</a></li>
-      </ul>
+    <li><a href="#Installation">Installation</a></li>
     </li>
     <li>
       <a href="#important-points">Important Points</a>
