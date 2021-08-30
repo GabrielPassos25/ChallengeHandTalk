@@ -77,10 +77,10 @@ Technologies and frameworks that were used throughout the implementation of the 
 
 - Below I list the credentials available to access the application:
 
-| Available Users |   | Password |
-| :-----: | :-: | :-: |
-| avaliador1@gmail.com |  | 123456789 |
-| avaliador2@gmail.com |  | 123456789 |
+| Available Users |
+| :-----: |
+| avaliador1@gmail.com |
+| avaliador2@gmail.com |
 
 - Colors available for alteration (**NOTE: Follow exactly the way the color is written. The application is case sensitive.**):
 
