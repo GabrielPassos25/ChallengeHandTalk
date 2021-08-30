@@ -123,7 +123,7 @@ Technologies and frameworks that were used throughout the implementation of the 
  </a>
 
 Abaixo, ilustro algumas das telas implementadas, de acordo com o protótipo do figma.
-- Iphone:
+- Iphone (**Note: Iphone recorder hides the keyboard and password characters by default**):
 https://user-images.githubusercontent.com/47640031/131271940-3de48cb7-e559-4127-8eb8-cb4357ab6d7c.MP4
 
 - Android:
