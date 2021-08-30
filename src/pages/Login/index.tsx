@@ -1,24 +1,30 @@
+// Importação das bibliotecas utilizadas
 import React from "react";
-import { Container, StatusBarAndroid, WelcomeTitle, WelcomeText, LogoContainer, InfoContainer, InputContainer} from "./styles";
-import { Platform, ScrollView } from "react-native";
-import LottieView from 'lottie-react-native';
-import LoadAnimation from '../../assets/login.json';
-import { useForm } from "react-hook-form";
 import * as Yup from "yup";
+import { useForm } from "react-hook-form";
+import LottieView from 'lottie-react-native';
+import { Platform, ScrollView } from "react-native";
+import LoadAnimation from '../../assets/login.json';
 import { yupResolver } from "@hookform/resolvers/yup";
-import {auth} from '../../../firebase';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { RFValue } from "react-native-responsive-fontsize";
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
-import { InputForm } from "../../components/InputForm";
+//Importação de componentes pré-construidos
+import {auth} from '../../../firebase';
 import {Button} from "../../components/Button";
+import { InputForm } from "../../components/InputForm";
 import { SVGrender } from "../../components/SVGrender";
 
+//Estilização dos componentes
+import { Container, StatusBarAndroid, WelcomeTitle, WelcomeText, LogoContainer, InfoContainer, InputContainer} from "./styles";
+
+//Verificador de erros input de login
 const schema = Yup.object().shape({
   email: Yup.string().email("Email inválido").required("Email é obrigatório!"),
   password: Yup.string().required("Senha é obrigatória!"),
 });
 
+//Variáveis padrões para os componentes
 interface Props {
   navigation: any;
 }
@@ -29,6 +35,7 @@ interface FormData {
 }
 
 export function Login({ navigation } : Props) {
+  //Controle do formulário de login
   const {
     control,
     handleSubmit,
@@ -37,21 +44,22 @@ export function Login({ navigation } : Props) {
     resolver: yupResolver(schema),
   });
 
+  //Função para o login
   function handleLogin(form: FormData){
     const data = {
       email: form.email,
       senha: form.password
     }
     auth.signInWithEmailAndPassword(data.email, data.senha).then(function(){
-        alert("Logado com sucesso!");
+        navigation.navigate('Home');
     }).catch(function(){
         alert("Credenciais inválidas. Verifique as credenciais inseridas e tente novamente!");
     })
   }
 
   return (
-    <ScrollView style={{flex:1}} bounces={false} showsVerticalScrollIndicator={false} contentContainerStyle={{flex: 1}}>
-      <KeyboardAwareScrollView bounces={false} showsVerticalScrollIndicator={false} contentContainerStyle={Platform.select({ios: {flex:1}})}>
+    <KeyboardAwareScrollView bounces={false} showsVerticalScrollIndicator={false} contentContainerStyle={Platform.select({ios: {flex:1}})}>
+      <ScrollView style={{flex:1}} bounces={false} showsVerticalScrollIndicator={false} contentContainerStyle={{flex: 1}}>
         <Container>
           {Platform.OS === "android" ? <StatusBarAndroid /> : <></>}
           <LogoContainer>
@@ -67,10 +75,10 @@ export function Login({ navigation } : Props) {
           <InputContainer>
               <InputForm control={control} name="email" type="email" error={errors.email && errors.email.message} title="Email"/>
               <InputForm control={control} name="password" type="password" error={errors.password && errors.password.message} title="Senha"/>
-              <Button title="Entrar" onPress={handleSubmit(handleLogin)}/>
+              <Button title="Entrar" type="login" onPress={handleSubmit(handleLogin)}/>
           </InputContainer>
         </Container>
-      </KeyboardAwareScrollView>
-    </ScrollView>
+      </ScrollView>
+    </KeyboardAwareScrollView>
   );  
 }

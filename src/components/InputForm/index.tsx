@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { TextInputProps } from 'react-native'
 import { Container, Titulo, Forms, Icon, Error, Input } from './styles';
 import { Control, Controller } from 'react-hook-form';
@@ -6,6 +6,7 @@ import { Control, Controller } from 'react-hook-form';
 const icons = {
     email: "email-outline",
     password: "lock-outline",
+    color: "pencil"
 }
 
 interface Props extends TextInputProps {
@@ -13,7 +14,7 @@ interface Props extends TextInputProps {
     name: string;
     error: string;
     title: string,
-    type: 'email' | 'password';
+    type: 'email' | 'password' | 'color';
 }
 
 

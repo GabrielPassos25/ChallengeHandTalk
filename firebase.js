@@ -1,11 +1,11 @@
 import * as firebase from 'firebase';
 import 'firebase/firestore';
 import 'firebase/auth';
-import { Alert } from 'react-native';
 
 const firebaseConfig = {
     apiKey: "AIzaSyBqNjyb7U4YOBVIMmirfwDOPCZabvVqtwE",
     authDomain: "challengehandtalk.firebaseapp.com",
+    databaseURL: "https://challengehandtalk-default-rtdb.firebaseio.com",
     projectId: "challengehandtalk",
     storageBucket: "challengehandtalk.appspot.com",
     messagingSenderId: "579370551060",
@@ -13,8 +13,11 @@ const firebaseConfig = {
     measurementId: "G-YDQH0WQ7ZT"
 };
   
-
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+ }else {
+    firebase.app(); // if already initialized, use that one
+ }
 const db = firebase.firestore();
 const auth = firebase.auth();
 

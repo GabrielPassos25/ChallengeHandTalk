@@ -40,7 +40,7 @@ Main points:
 - Visual alteration of the objects from the Realtime Database query;
 
 
-### Built with
+## Built with
 Technologies and frameworks that were used throughout the implementation of the application
 
 * [React-Native](https://reactnative.dev)
@@ -49,7 +49,7 @@ Technologies and frameworks that were used throughout the implementation of the 
 * [TypeScript](https://www.typescriptlang.org/)
 * [Figma](https://www.figma.com/)
 
-### Instalação
+## Installation
 
 1. Clone the repository
   ```sh
@@ -66,9 +66,54 @@ Technologies and frameworks that were used throughout the implementation of the 
    expo start
    ```
 
-4. To open in the android emulator, just press "a" in the terminal with the emulator open. Or, to open it on a physical device, just scan the QR code.
+4. To run the aplication, just scan the QR code to open it on a physical device. (**NOTE: The application, because of the emulator's native features, only works on physical devices. Make sure you are running on a PHYSICAL device**) 
 
 5. Evaluate the application :smile:
+
+## Important Points
+- The application, because of the emulator's native features, only works on physical devices. Make sure you are running on a PHYSICAL device.
+
+- By default, all colors will start, directly in the database, as white. When you make the first change, the colors will already be synchronized automatically.
+
+- Below I list the credentials available to access the application:
+
+| Available Users |   | Password |
+| :-----: | :-: | :-: |
+| avaliador1@gmail.com |  | 123456789 |
+| avaliador2@gmail.com |  | 123456789 |
+
+- Colors available for alteration (**NOTE: Follow exactly the way the color is written. The application is case sensitive.**):
+
+| Available Colors | 
+| :-----: |
+| green |
+| blue | 
+| red | 
+| white | 
+| purple | 
+| black | 
+| yellow | 
+
+### Main features to be added
+- Splash Screen
+  - [x] Create splash screen;
+- Login Screen
+  - [x] Add logo -> HandTalk;
+  - [x] Add animation using lootieview;
+  - [x] User authentication using firebase authenticator;
+  - [x] Validate correct email and password input;
+  - [x] Alert for invalid credentials;
+- Home Screen
+  - [x] Add options to render the selected geometric shape;
+  - [x] Add shadow to the geometric shape;
+  - [x] Rotate geometric shape;
+  - [x] Perform color synchronization with the realtime database;
+  - [x] Add input to change color and synchronize change in database;
+  - [x] Invalid color alert;
+  - [x] Avoid input overlap with the keyboard;
+  - [ ] Invalid color bug in android -> Apparently, when trying to put an invalid color in android, the error condition is not being validated and the color goes invalid in the database. However, when trying to change the color to a valid color, the change occurs normally. **(NOTE: THIS DOES NOT HAPPEN ON IOS. VALIDATION OCCURS AND THE COLOR IS NOT CHANGED)**
+- Emulator Issue
+  - [ ] Investigate native emulator error
 
 ## Prints
 <a href="https://www.figma.com/file/7muiBa3MVMuood6zDHWtSF/Challenge-Hand-Talk?node-id=0%3A1">Mockup and style guide</a> created to serve as a guide for project implementation using Figma. 
