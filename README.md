@@ -25,6 +25,9 @@
         <li><a href="#Installation">Installation</a></li>
       </ul>
     </li>
+    <li>
+      <a href="#Main features to be added">Main features to be added</a>
+    </li>
     <li><a href="#Prints">Prints of the developed application</a></li>
   </ol>
 </details>
