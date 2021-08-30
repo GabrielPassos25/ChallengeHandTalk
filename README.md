@@ -19,9 +19,7 @@
         <li><a href="#built-with">Built with</a></li>
       </ul>
     </li>
-    <li>
     <li><a href="#Installation">Installation</a></li>
-    </li>
     <li>
       <a href="#important-points">Important Points</a>
     </li>
